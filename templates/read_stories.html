@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KiddoVerse | Stories</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body class="bg-cream text-gray-800 font-sans min-h-screen" style="background-color: #fff9f3;">
+
+    <!-- Container to center everything -->
+    <div class="flex flex-col items-center justify-center min-h-screen px-4">
+
+        <!-- Top Navigation -->
+        <div class="flex justify-between py-6 w-full max-w-4xl mb-6">
+            <div class="text-3xl text-red-500 space-y-1 px-4 sm:px-0">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+
+            <div class="flex space-x-4  px-4 sm:px-0 font-sans">
+                <div class="input-group flex-nowrap">
+                    <span class="input-group-text" id="addon-wrapping"><i
+                            class="fa-solid fa-magnifying-glass"></i></span>
+                    <input type="search" class="form-control" placeholder="Search" aria-label="Search"
+                        aria-describedby="addon-wrapping">
+                </div>
+            </div>
+
+
+        </div>
+
+        <!-- Story Categories Section -->
+        <div class="w-full max-w-4xl mx-auto flex flex-col gap-7 md:grid mb-7 md:grid-cols-2 md:gap-6 px-6">
+
+            <!-- Fairy Tales -->
+            <div
+                class="bg-purple-200 rounded-2xl p-6 flex flex-col items-center w-full scale-105 hover:scale-110 transition">
+                <img src="https://cdn-icons-png.flaticon.com/512/3329/3329030.png" alt="Fairy Tales"
+                    class="w-24 h-24 mb-4" />
+                <h2 class="text-2xl font-bold text-white">Fairy Tales</h2>
+                <button class="bg-purple-400 text-white px-6 py-2 mt-3 rounded-full text-sm">Fairy Tales</button>
+            </div>
+
+            <!-- Animals -->
+            <div
+                class="bg-teal-200 rounded-2xl p-6 flex flex-col items-center w-full scale-105 hover:scale-110 transition">
+                <img src="https://cdn-icons-png.flaticon.com/512/616/616408.png" alt="Animals" class="w-24 h-24 mb-4" />
+                <h2 class="text-2xl font-bold text-white">Animals</h2>
+                <button class="bg-orange-400 text-white px-6 py-2 mt-3 rounded-full text-sm">Animals</button>
+            </div>
+
+            <!-- Adventure -->
+            <div
+                class="bg-yellow-300 rounded-2xl p-6 flex flex-col items-center w-full scale-105 hover:scale-110 transition">
+                <img src="https://cdn-icons-png.flaticon.com/512/3771/3771521.png" alt="Adventure"
+                    class="w-24 h-24 mb-4" />
+                <h2 class="text-2xl font-bold text-white">Adventure</h2>
+                <button class="bg-orange-600 text-white px-6 py-2 mt-3 rounded-full text-sm">Adventure</button>
+            </div>
+
+            <!-- Bedtime -->
+            <div
+                class="bg-blue-800 rounded-2xl p-6 flex flex-col items-center w-full scale-105 hover:scale-110 transition">
+                <img src="https://cdn-icons-png.flaticon.com/512/947/947618.png" alt="Bedtime" class="w-24 h-24 mb-4" />
+                <h2 class="text-2xl font-bold text-white">Bedtime</h2>
+                <button class="bg-purple-400 text-white px-6 py-2 mt-3 rounded-full text-sm">Bedtime</button>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
