@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fairy Tales | KiddoVerse</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+  <body class="bg-[#fff9f3] text-gray-800 font-sans min-h-screen p-4">
+    <div class="w-full flex flex-col items-center justify-center">
+      <!-- Header -->
+      <div class="w-full flex justify-between gap-5 mb-6 max-w-4xl">
+        <!-- Back Button -->
+        <a href=" {{ url_for('read_stories')}}"><button class="text-2xl text-white border-none bg-blue-600 px-3 rounded-full"><i class="fa-solid fa-arrow-left"></i></button></a>
+
+        <!-- Title -->
+        <h1
+          class="text-4xl font-bold text-purple-700 text-center flex-grow"
+        >
+          FAIRY TALES
+        </h1>
+      </div>
+
+      <!-- Stories Grid -->
+      <div
+        class="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-4 max-w-5xl"
+      >
+        <!-- Story Card -->
+        <div
+          class="bg-white rounded-xl p-3 flex flex-col items-center shadow-md"
+        >
+          <img
+            src="https://cdn-icons-png.flaticon.com/128/6336/6336650.png"
+            alt="Little Elf"
+            class="w-20 h-20 mb-2"
+          />
+          <h2 class="text-center text-sm font-bold">
+            The Little Elf<br />and the Lost Shoes
+          </h2>
+          <span
+            class="bg-orange-400 text-white text-xs px-3 py-1 mt-2 rounded-full"
+            >Ages 4+</span
+          >
+        </div>
+
+        <div
+          class="bg-white rounded-xl p-3 flex flex-col items-center shadow-md"
+        >
+          <img
+            src="https://cdn-icons-png.flaticon.com/128/8726/8726396.png"
+            alt="Magic Pumpkin"
+            class="w-20 h-20 mb-2"
+          />
+          <h2 class="text-center text-sm font-bold">The Magic Pumpkin</h2>
+          <span
+            class="bg-orange-400 text-white text-xs px-3 py-1 mt-2 rounded-full"
+            >Ages 4+</span
+          >
+        </div>
+
+        <div
+          class="bg-white rounded-xl p-3 flex flex-col items-center shadow-md"
+        >
+          <img
+            src="https://cdn-icons-png.flaticon.com/128/1067/1067827.png"
+            alt="Mouse"
+            class="w-20 h-20 mb-2"
+          />
+          <h2 class="text-center text-sm font-bold">The Brave Little Mouse</h2>
+          <span
+            class="bg-orange-400 text-white text-xs px-3 py-1 mt-2 rounded-full"
+            >Ages 4+</span
+          >
+        </div>
+
+        <div
+          class="bg-white rounded-xl p-3 flex flex-col items-center shadow-md"
+        >
+          <img
+            src="https://cdn-icons-png.flaticon.com/128/10506/10506410.png"
+            alt="Princess"
+            class="w-20 h-20 mb-2"
+          />
+          <h2 class="text-center text-sm font-bold">The Cloud Princess</h2>
+          <span
+            class="bg-orange-400 text-white text-xs px-3 py-1 mt-2 rounded-full"
+            >Ages 4+</span
+          >
+        </div>
+
+        <div
+          class="bg-white rounded-xl p-3 flex flex-col items-center shadow-md"
+        >
+          <img
+            src="https://cdn-icons-png.flaticon.com/128/2220/2220091.png"
+            alt="Tree"
+            class="w-20 h-20 mb-2"
+          />
+          <h2 class="text-center text-sm font-bold">The Talking Tree</h2>
+          <span
+            class="bg-orange-400 text-white text-xs px-3 py-1 mt-2 rounded-full"
+            >Ages 4+</span
+          >
+        </div>
+
+        <div
+          class="bg-white rounded-xl p-3 flex flex-col items-center shadow-md"
+        >
+          <img
+            src="https://cdn-icons-png.flaticon.com/128/9922/9922789.png"
+            alt="Goose"
+            class="w-20 h-20 mb-2"
+          />
+          <h2 class="text-center text-sm font-bold">The Golden Goose</h2>
+          <span
+            class="bg-orange-400 text-white text-xs px-3 py-1 mt-2 rounded-full"
+            >Ages 4+</span
+          >
+        </div>
+
+        <div
+          class="bg-white rounded-xl p-3 flex flex-col items-center shadow-md"
+        >
+          <img
+            src="https://cdn-icons-png.flaticon.com/128/14040/14040382.png"
+            alt="Carpet"
+            class="w-20 h-20 mb-2"
+          />
+          <h2 class="text-center text-sm font-bold">
+            The Flying Carpet Adventure
+          </h2>
+          <span
+            class="bg-orange-400 text-white text-xs px-3 py-1 mt-2 rounded-full"
+            >Ages 4+</span
+          >
+        </div>
+
+        <div
+          class="bg-white rounded-xl p-3 flex flex-col items-center shadow-md"
+        >
+          <img
+            src="https://cdn-icons-png.flaticon.com/128/3943/3943745.png"
+            alt="Dragon"
+            class="w-20 h-20 mb-2"
+          />
+          <h2 class="text-center text-sm font-bold">The Kind Dragon</h2>
+          <span
+            class="bg-orange-400 text-white text-xs px-3 py-1 mt-2 rounded-full"
+            >Ages 4+</span
+          >
+        </div>
+
+        <div
+          class="bg-white rounded-xl p-3 flex flex-col items-center shadow-md"
+        >
+          <img
+            src="https://cdn-icons-png.flaticon.com/128/7883/7883749.png"
+            alt="Mermaid"
+            class="w-20 h-20 mb-2"
+          />
+          <h2 class="text-center text-sm font-bold">The Mermaid’s Secret</h2>
+          <span
+            class="bg-orange-400 text-white text-xs px-3 py-1 mt-2 rounded-full"
+            >Ages 4+</span
+          >
+        </div>
+
+        <div
+          class="bg-white rounded-xl p-3 flex flex-col items-center shadow-md"
+        >
+          <img
+            src="https://cdn-icons-png.flaticon.com/128/2793/2793205.png"
+            alt="Giant"
+            class="w-20 h-20 mb-2"
+          />
+          <h2 class="text-center text-sm font-bold">The Sleepy Giant</h2>
+          <span
+            class="bg-orange-400 text-white text-xs px-3 py-1 mt-2 rounded-full"
+            >Ages 4+</span
+          >
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

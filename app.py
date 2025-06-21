@@ -16,5 +16,10 @@ def read_stories():
     """render the read stories page"""
     return render_template('read_stories.html')
 
+@app.route('/api/read-stories/fairytales', methods=['GET'])
+def fairytales():
+    """render fairy tales stories page"""
+    return render_template('fairytales.html')
+
 if __name__ == '__main__':
     app.run(debug=True)
