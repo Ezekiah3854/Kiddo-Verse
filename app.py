@@ -12,14 +12,19 @@ def learning_tools():
     return render_template('learning_tools.html')
 
 @app.route('/api/read-stories', methods=['GET'])
-def read_stories():
+def storiescategories():
     """render the read stories page"""
-    return render_template('read_stories.html')
+    return render_template('storiescategories.html')
 
 @app.route('/api/read-stories/fairytales', methods=['GET'])
 def fairytales():
-    """render fairy tales stories page"""
+    """render fairy tales page"""
     return render_template('fairytales.html')
+
+@app.route('/api/read-stories/animal-stories', methods=['GET'])
+def animalstories():
+    """render animal stories page"""
+    return render_template('animalstories.html')
 
 if __name__ == '__main__':
     app.run(debug=True)
