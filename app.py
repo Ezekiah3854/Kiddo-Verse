@@ -31,5 +31,10 @@ def adventurestories():
     """render adventure stories page"""
     return render_template('adventurestories.html')
 
+@app.route('/api/stories-category/bedtime-stories', methods=['GET'])
+def bedtimestories():
+    """render bedtime stories page"""
+    return render_template('bedtimestories.html')
+
 if __name__ == '__main__':
     app.run(debug=True)
