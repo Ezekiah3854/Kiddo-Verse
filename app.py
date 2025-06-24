@@ -26,5 +26,10 @@ def animalstories():
     """render animal stories page"""
     return render_template('animalstories.html')
 
+@app.route('/api/stories-category/adventure-stories', methods=['GET'])
+def adventurestories():
+    """render adventure stories page"""
+    return render_template('adventurestories.html')
+
 if __name__ == '__main__':
     app.run(debug=True)

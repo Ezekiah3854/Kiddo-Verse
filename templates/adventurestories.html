@@ -1,0 +1,82 @@
+{% extends 'fairytales.html'%}
+{% block title%}Adventure{% endblock%}
+{% block container%}
+<!-- Header -->
+<div class="w-full flex justify-between gap-5 mb-6 max-w-4xl">
+    <!-- Back Button -->
+    <a href="{{ url_for('storiescategories')}}">
+        <button class="text-2xl text-white border-none bg-blue-600 px-3 rounded-full">
+            <i class="fa-solid fa-arrow-left"></i>
+        </button>
+    </a>
+
+    <!-- Title -->
+    <h1 class="text-4xl font-bold text-purple-700 text-center flex-grow">ADVENTURE STORIES</h1>
+</div>
+
+<!-- Stories Grid -->
+<div class="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-4 max-w-5xl">
+    <!-- Story Card -->
+    <div class="bg-white rounded-xl p-3 flex flex-col items-center shadow-lg">
+        <img src="https://cdn-icons-png.flaticon.com/256/11105/11105996.png" alt="Little Elf" class="w-20 h-20 mb-2" />
+        <h2 class="text-center text-md font-bold">The Map in the Treehouse</h2>
+        <span class="text-gray-800 text-xs px-3 py-1 mt-2">A group of friends discovers an old map leading to a
+            forgotten forest treasure.</span>
+    </div>
+    <div class="bg-white rounded-xl p-3 flex flex-col items-center shadow-lg">
+        <img src="https://cdn-icons-png.flaticon.com/256/8453/8453071.png" alt="Little Elf" class="w-20 h-20 mb-2" />
+        <h2 class="text-center text-md font-bold">Captain Coco and the Island of Whistles</h2>
+        <span class="text-gray-800 text-xs px-3 py-1 mt-2">A playful parrot captain searches for a hidden island that
+            only sings at sunset.</span>
+    </div>
+    <div class="bg-white rounded-xl p-3 flex flex-col items-center shadow-lg">
+        <img src="https://cdn-icons-png.flaticon.com/256/10757/10757345.png" alt="Little Elf" class="w-20 h-20 mb-2" />
+        <h2 class="text-center text-md font-bold">The Bubble That Flew Around the World</h2>
+        <span class="text-gray-800 text-xs px-3 py-1 mt-2">A magical bubble carries a little girl on an unexpected
+            journey to new lands.</span>
+    </div>
+    <div class="bg-white rounded-xl p-3 flex flex-col items-center shadow-lg">
+        <img src="https://cdn-icons-png.flaticon.com/128/8666/8666974.png" alt="Little Elf" class="w-20 h-20 mb-2" />
+        <h2 class="text-center text-md font-bold">Timmy and the Secret Tunnel</h2>
+        <span class="text-gray-800 text-xs px-3 py-1 mt-2">Beneath the school playground lies a tunnel full of ancient
+            puzzles and surprises.</span>
+    </div>
+    <div class="bg-white rounded-xl p-3 flex flex-col items-center shadow-lg">
+        <img src="https://cdn-icons-png.flaticon.com/256/4359/4359885.png" alt="Little Elf" class="w-20 h-20 mb-2" />
+        <h2 class="text-center text-md font-bold">The Train to Rainbow Mountain</h2>
+        <span class="text-gray-800 text-xs px-3 py-1 mt-2">A talking train invites children to ride toward a mountain
+            full of color and mystery.</span>
+    </div>
+    <div class="bg-white rounded-xl p-3 flex flex-col items-center shadow-lg">
+        <img src="https://cdn-icons-png.flaticon.com/256/12340/12340089.png" alt="Little Elf" class="w-20 h-20 mb-2" />
+        <h2 class="text-center text-md font-bold">The Backpack That Packed Itself</h2>
+        <span class="text-gray-800 text-xs px-3 py-1 mt-2">Sam’s backpack starts zipping and packing on its own and
+            leads him on a quest.</span>
+    </div>
+    <div class="bg-white rounded-xl p-3 flex flex-col items-center shadow-lg">
+        <img src="https://cdn-icons-png.flaticon.com/256/7549/7549227.png" alt="Little Elf" class="w-20 h-20 mb-2" />
+        <h2 class="text-center text-md font-bold">Ella and the Midnight Elevator</h2>
+        <span class="text-gray-800 text-xs px-3 py-1 mt-2">An elevator in her dreams takes Ella to fantastic worlds
+            every midnight.</span>
+    </div>
+    <div class="bg-white rounded-xl p-3 flex flex-col items-center shadow-lg">
+        <img src="https://cdn-icons-png.flaticon.com/256/5679/5679595.png" alt="Little Elf" class="w-20 h-20 mb-2" />
+        <h2 class="text-center text-md font-bold">The Compass That Points to Wonder</h2>
+        <span class="text-gray-800 text-xs px-3 py-1 mt-2">A magical compass guides two siblings on an adventure across
+            air, land, and sea.</span>
+    </div>
+
+    <div class="bg-white rounded-xl p-3 flex flex-col items-center shadow-lg">
+        <img src="https://cdn-icons-png.flaticon.com/256/7711/7711372.png" alt="Little Elf" class="w-20 h-20 mb-2" />
+        <h2 class="text-center text-md font-bold">Jasper and the Jellybean Jungle</h2>
+        <span class="text-gray-800 text-xs px-3 py-1 mt-2">An entire jungle made of sweets; but not everything there is
+            as tasty as it seems.</span>
+    </div>
+    <div class="bg-white rounded-xl p-3 flex flex-col items-center shadow-lg">
+        <img src="https://cdn-icons-png.flaticon.com/256/9521/9521778.png" alt="Little Elf" class="w-20 h-20 mb-2" />
+        <h2 class="text-center text-md font-bold">The Kite That Rode the Stars</h2>
+        <span class="text-gray-800 text-xs px-3 py-1 mt-2">A runaway kite takes a boy soaring through skies filled with
+            starlight creatures.</span>
+    </div>
+</div>
+{% endblock%}
