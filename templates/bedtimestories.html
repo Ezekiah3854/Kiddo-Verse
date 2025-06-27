@@ -17,29 +17,36 @@
 <!-- Stories Grid -->
 <div class="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-4 max-w-5xl">
     <!-- Story Card -->
-    <div class="bg-white rounded-xl p-3 flex flex-col items-center shadow-lg">
-        <img src="https://cdn-icons-png.flaticon.com/256/11752/11752582.png" alt="Little Elf" class="w-20 h-20 mb-2" />
-        <h2 class="text-center text-md font-bold">The Moon Who Wanted a Hug</h2>
-        <span class="text-gray-800 text-xs px-3 py-1 mt-2">A lonely moon finds comfort by watching over sleeping children.</span>
-    </div>
+    <a href="{{ url_for('story', story_id = 'moon-hug')}}">
+        <div class="bg-white rounded-xl p-3 flex flex-col items-center shadow-lg">
+            <img src="https://cdn-icons-png.flaticon.com/256/11752/11752582.png" alt="Little Elf"
+                class="w-20 h-20 mb-2" />
+            <h2 class="text-center text-md font-bold">The Moon Who Wanted a Hug</h2>
+            <span class="text-gray-800 text-xs px-3 py-1 mt-2">A lonely moon finds comfort by watching over sleeping
+                children.</span>
+        </div>
+    </a>
 
     <div class="bg-white rounded-xl p-3 flex flex-col items-center shadow-lg">
         <img src="https://cdn-icons-png.flaticon.com/128/11035/11035692.png" alt="Little Elf" class="w-20 h-20 mb-2" />
         <h2 class="text-center text-md font-bold">Luna and the Sleepy Stars</h2>
-        <span class="text-gray-800 text-xs px-3 py-1 mt-2">A little girl climbs into the sky to help tuck the stars into bed.</span>
+        <span class="text-gray-800 text-xs px-3 py-1 mt-2">A little girl climbs into the sky to help tuck the stars into
+            bed.</span>
     </div>
 
     <div class="bg-white rounded-xl p-3 flex flex-col items-center shadow-lg">
         <img src="https://cdn-icons-png.flaticon.com/128/15208/15208704.png" alt="Little Elf" class="w-20 h-20 mb-2" />
         <h2 class="text-center text-md font-bold">The Yawning Forest</h2>
-        <span class="text-gray-800 text-xs px-3 py-1 mt-2">All the animals of the forest take turns getting ready for a dreamy night.</span>
+        <span class="text-gray-800 text-xs px-3 py-1 mt-2">All the animals of the forest take turns getting ready for a
+            dreamy night.</span>
     </div>
 
     <div class="bg-white rounded-xl p-3 flex flex-col items-center shadow-lg">
         <img src="https://cdn-icons-png.flaticon.com/128/5796/5796107.png" alt="Little Elf" class="w-20 h-20 mb-2" />
         <h2 class="text-center text-md font-bold">Max and the Magical Pajamas</h2>
-        <span class="text-gray-800 text-xs px-3 py-1 mt-2">Max’s pajamas transport him to a soft, cloud-filled land of dreams.</span>
+        <span class="text-gray-800 text-xs px-3 py-1 mt-2">Max’s pajamas transport him to a soft, cloud-filled land of
+            dreams.</span>
     </div>
-    
+
 </div>
 {% endblock%}

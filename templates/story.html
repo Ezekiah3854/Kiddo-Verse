@@ -1,0 +1,20 @@
+{% extends 'fairytales.html'%}
+{% block title%}{{story.category}}{% endblock%}
+{% block container%}
+<div class="w-full flex justify-between gap-5 mb-2 max-w-3xl">
+    <a href="{{ url_for('storiescategories') }}" class="text-blue-600 font-semibold mb-4 block"><i class="fa-solid fa-circle-arrow-left mr-3 "></i>Back to Stories</a>
+
+    <div class="flex justify-center mb-6">
+        <img src="{{ story.image }}" alt="{{ story.title }}" class="w-20 h-20" />
+    </div>
+</div>
+
+<h1 class="text-4xl font-bold text-orange-600 mb-4 text-center">{{ story.title }}</h1>
+
+<div class="max-w-3xl mx-auto text-lg leading-relaxed space-y-4">
+    {% for paragraph in story.content %}
+    <p>{{ paragraph }}</p>
+    {% endfor %}
+    <p class="py-6 text-center font-semibold">***** The End *****</p>
+</div>
+{% endblock%}

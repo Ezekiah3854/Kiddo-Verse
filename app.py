@@ -1,4 +1,11 @@
-from flask import Flask, request, jsonify, render_template, url_for
+import os
+import json
+from flask import Flask, render_template
+
+# Load story data once
+STORIES_PATH = os.path.join(os.path.dirname(__file__), 'stories.json')
+with open(STORIES_PATH) as f:
+    stories = json.load(f)
 
 app = Flask(__name__)
 @app.route('/')
@@ -35,6 +42,16 @@ def adventurestories():
 def bedtimestories():
     """render bedtime stories page"""
     return render_template('bedtimestories.html')
+
+@app.route('/story/<story_id>')
+def story(story_id):
+    """pass"""
+    #find story by ID
+    story_data = next((s for s in stories if s['id'] == story_id), None)
+    if story_data is None:
+        print("Mambo ni kama imekataaa kiasi!")
+
+    return render_template('story.html', story = story_data)
 
 if __name__ == '__main__':
     app.run(debug=True)
