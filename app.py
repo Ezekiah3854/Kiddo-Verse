@@ -4,7 +4,7 @@ from flask import Flask, render_template
 
 # Load story data once
 STORIES_PATH = os.path.join(os.path.dirname(__file__), 'stories.json')
-with open(STORIES_PATH) as f:
+with open(STORIES_PATH, encoding="utf-8") as f:
     stories = json.load(f)
 
 app = Flask(__name__)
