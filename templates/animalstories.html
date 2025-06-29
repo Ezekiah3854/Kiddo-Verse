@@ -17,72 +17,105 @@
 <!-- Stories Grid -->
 <div class="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-4 max-w-5xl">
     <!-- Story Card -->
-    <div class="bg-white rounded-xl p-3 flex flex-col items-center shadow-lg">
-        <img src="https://cdn-icons-png.flaticon.com/128/1580/1580496.png" alt="Little Elf" class="w-20 h-20 mb-2" />
-        <h2 class="text-center text-md font-bold">Benny the Brave Bunny</h2>
-        <span class="text-gray-800 text-xs px-3 py-1 mt-2">A curious bunny who saves his forest friends from a tricky
-            trap.</span>
-    </div>
+    <a href="{{ url_for('story', story_id = 'benny-bunny')}}">
+        <div class="bg-white rounded-xl p-3 flex flex-col items-center shadow-lg">
+            <img src="https://cdn-icons-png.flaticon.com/128/1580/1580496.png" alt="Little Elf"
+                class="w-20 h-20 mb-2" />
+            <h2 class="text-center text-md font-bold">Benny the Brave Bunny</h2>
+            <span class="text-gray-800 text-xs px-3 py-1 mt-2">A curious bunny who saves his forest friends from a
+                tricky
+                trap.</span>
+        </div>
+    </a>
 
-    <div class="bg-white rounded-xl p-3 flex flex-col items-center shadow-lg">
-        <img src="https://cdn-icons-png.flaticon.com/128/2559/2559432.png" alt="Little Elf" class="w-20 h-20 mb-2" />
-        <h2 class="text-center text-md font-bold">Leo the Lion Who Lost His Roar</h2>
-        <span class="text-gray-800 text-xs px-3 py-1 mt-2">A gentle lion on a journey to find his voice again.</span>
-    </div>
+    <a href="{{ url_for('story', story_id = 'leo-the-lion')}}">
+        <div class="bg-white rounded-xl p-3 flex flex-col items-center shadow-lg">
+            <img src="https://cdn-icons-png.flaticon.com/128/2559/2559432.png" alt="Little Elf"
+                class="w-20 h-20 mb-2" />
+            <h2 class="text-center text-md font-bold">Leo the Lion Who Lost His Roar</h2>
+            <span class="text-gray-800 text-xs px-3 py-1 mt-2">A gentle lion on a journey to find his voice
+                again.</span>
+        </div>
+    </a>
 
-    <div class="bg-white rounded-xl p-3 flex flex-col items-center shadow-lg">
-        <img src="https://cdn-icons-png.flaticon.com/128/14612/14612869.png" alt="Little Elf" class="w-20 h-20 mb-2" />
-        <h2 class="text-center text-md font-bold">Zara the Zebra's Magic Stripes</h2>
-        <span class="text-gray-800 text-xs px-3 py-1 mt-2">Stripes that glow with kindness, helping her unite the
-            animals</span>
-    </div>
+    <a href="{{ url_for('story', story_id = 'zara-zebra')}}">
+        <div class="bg-white rounded-xl p-3 flex flex-col items-center shadow-lg">
+            <img src="https://cdn-icons-png.flaticon.com/128/14612/14612869.png" alt="Little Elf"
+                class="w-20 h-20 mb-2" />
+            <h2 class="text-center text-md font-bold">Zara the Zebra's Magic Stripes</h2>
+            <span class="text-gray-800 text-xs px-3 py-1 mt-2">Stripes that glow with kindness, helping her unite the
+                animals</span>
+        </div>
+    </a>
 
-    <div class="bg-white rounded-xl p-3 flex flex-col items-center shadow-lg">
-        <img src="https://cdn-icons-png.flaticon.com/128/6789/6789501.png" alt="Little Elf" class="w-20 h-20 mb-2" />
-        <h2 class="text-center text-md font-bold">The Turtle Who Wanted to Fly</h2>
-        <span class="text-gray-800 text-xs px-3 py-1 mt-2">Timo the turtle dreams big and discovers the power of
-            patience.</span>
-    </div>
+    <a href="{{ url_for('story', story_id = 'turtle-fly')}}">
+        <div class="bg-white rounded-xl p-3 flex flex-col items-center shadow-lg">
+            <img src="https://cdn-icons-png.flaticon.com/128/6789/6789501.png" alt="Little Elf"
+                class="w-20 h-20 mb-2" />
+            <h2 class="text-center text-md font-bold">The Turtle Who Wanted to Fly</h2>
+            <span class="text-gray-800 text-xs px-3 py-1 mt-2">Timo the turtle dreams big and discovers the power of
+                patience.</span>
+        </div>
+    </a>
 
-    <div class="bg-white rounded-xl p-3 flex flex-col items-center shadow-lg">
-        <img src="https://cdn-icons-png.flaticon.com/128/2417/2417569.png" alt="Little Elf" class="w-20 h-20 mb-2" />
-        <h2 class="text-center text-md font-bold">Millie the Monkey's Banana Mission</h2>
-        <span class="text-gray-800 text-xs px-3 py-1 mt-2">An adventurous monkey learns about sharing in the
-            jungle.</span>
-    </div>
+    <a href="{{ url_for('story', story_id = 'millie-monkey')}}">
+        <div class="bg-white rounded-xl p-3 flex flex-col items-center shadow-lg">
+            <img src="https://cdn-icons-png.flaticon.com/128/2417/2417569.png" alt="Little Elf"
+                class="w-20 h-20 mb-2" />
+            <h2 class="text-center text-md font-bold">Millie the Monkey's Banana Mission</h2>
+            <span class="text-gray-800 text-xs px-3 py-1 mt-2">An adventurous monkey learns about sharing in the
+                jungle.</span>
+        </div>
+    </a>
 
-    <div class="bg-white rounded-xl p-3 flex flex-col items-center shadow-lg">
-        <img src="https://cdn-icons-png.flaticon.com/128/8524/8524285.png" alt="Little Elf" class="w-20 h-20 mb-2" />
-        <h2 class="text-center text-md font-bold">Felix the Fox and the Forest Fair</h2>
-        <span class="text-gray-800 text-xs px-3 py-1 mt-2">A clever fox who learns teamwork while planning a surprise
-            party.</span>
-    </div>
+    <a href="{{ url_for('story', story_id = 'felix-fox')}}">
+        <div class="bg-white rounded-xl p-3 flex flex-col items-center shadow-lg">
+            <img src="https://cdn-icons-png.flaticon.com/128/8524/8524285.png" alt="Little Elf"
+                class="w-20 h-20 mb-2" />
+            <h2 class="text-center text-md font-bold">Felix the Fox and the Forest Fair</h2>
+            <span class="text-gray-800 text-xs px-3 py-1 mt-2">A clever fox who learns teamwork while planning a
+                surprise
+                party.</span>
+        </div>
+    </a>
 
-    <div class="bg-white rounded-xl p-3 flex flex-col items-center shadow-lg">
-        <img src="https://cdn-icons-png.flaticon.com/256/8453/8453277.png" alt="Little Elf" class="w-20 h-20 mb-2" />
-        <h2 class="text-center text-md font-bold">Daisy the Dancing Duck</h2>
-        <span class="text-gray-800 text-xs px-3 py-1 mt-2">A shy duck who finds courage through dance.</span>
-    </div>
+    <a href="{{ url_for('story', story_id = 'daisy-duck')}}">
+        <div class="bg-white rounded-xl p-3 flex flex-col items-center shadow-lg">
+            <img src="https://cdn-icons-png.flaticon.com/256/8453/8453277.png" alt="Little Elf"
+                class="w-20 h-20 mb-2" />
+            <h2 class="text-center text-md font-bold">Daisy the Dancing Duck</h2>
+            <span class="text-gray-800 text-xs px-3 py-1 mt-2">A shy duck who finds courage through dance.</span>
+        </div>
+    </a>
 
-    <div class="bg-white rounded-xl p-3 flex flex-col items-center shadow-lg">
-        <img src="https://cdn-icons-png.flaticon.com/128/16068/16068150.png" alt="Little Elf" class="w-20 h-20 mb-2" />
-        <h2 class="text-center text-md font-bold">Oscar the Owl's Night School</h2>
-        <span class="text-gray-800 text-xs px-3 py-1 mt-2">A wise owl teaching forest creatures under the
-            moonlight.</span>
-    </div>
+    <a href="{{ url_for('story', story_id = 'oscar-owl')}}">
+        <div class="bg-white rounded-xl p-3 flex flex-col items-center shadow-lg">
+            <img src="https://cdn-icons-png.flaticon.com/128/16068/16068150.png" alt="Little Elf"
+                class="w-20 h-20 mb-2" />
+            <h2 class="text-center text-md font-bold">Oscar the Owl's Night School</h2>
+            <span class="text-gray-800 text-xs px-3 py-1 mt-2">A wise owl teaching forest creatures under the
+                moonlight.</span>
+        </div>
+    </a>
 
-    <div class="bg-white rounded-xl p-3 flex flex-col items-center shadow-lg">
-        <img src="https://cdn-icons-png.flaticon.com/128/2403/2403773.png" alt="Little Elf" class="w-20 h-20 mb-2" />
-        <h2 class="text-center text-md font-bold">Gina the Giraffe's Tall Tale</h2>
-        <span class="text-gray-800 text-xs px-3 py-1 mt-2">A giraffe who stretches the truth and learns the value of
-            honesty.</span>
-    </div>
+    <a href="{{ url_for('story', story_id = 'gina-giraffe')}}">
+        <div class="bg-white rounded-xl p-3 flex flex-col items-center shadow-lg">
+            <img src="https://cdn-icons-png.flaticon.com/128/2403/2403773.png" alt="Little Elf"
+                class="w-20 h-20 mb-2" />
+            <h2 class="text-center text-md font-bold">Gina the Giraffe's Tall Tale</h2>
+            <span class="text-gray-800 text-xs px-3 py-1 mt-2">A giraffe who stretches the truth and learns the value of
+                honesty.</span>
+        </div>
+    </a>
 
-    <div class="bg-white rounded-xl p-3 flex flex-col items-center shadow-lg">
-        <img src="https://cdn-icons-png.flaticon.com/256/10405/10405219.png" alt="Little Elf" class="w-20 h-20 mb-2" />
-        <h2 class="text-center text-md font-bold">The Bear Who Loved Blueberries</h2>
-        <span class="text-gray-800 text-xs px-3 py-1 mt-2">A kind bear whose love for blueberries teaches
-            generosity.</span>
-    </div>
+    <a href="{{ url_for('story', story_id = 'bear-blueberries')}}">
+        <div class="bg-white rounded-xl p-3 flex flex-col items-center shadow-lg">
+            <img src="https://cdn-icons-png.flaticon.com/256/10405/10405219.png" alt="Little Elf"
+                class="w-20 h-20 mb-2" />
+            <h2 class="text-center text-md font-bold">The Bear Who Loved Blueberries</h2>
+            <span class="text-gray-800 text-xs px-3 py-1 mt-2">A kind bear whose love for blueberries teaches
+                generosity.</span>
+        </div>
+    </a>
 </div>
 {% endblock%}
