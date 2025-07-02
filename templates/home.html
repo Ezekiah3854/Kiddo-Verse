@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" x-data="{ open: false }">
 
 <head>
   <meta charset="UTF-8" />
@@ -8,22 +8,60 @@
   <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/128/8973/8973397.png" type="image/x-icon">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/alpinejs" defer></script>
+
 </head>
 
 <body class="bg-white text-gray-800 font-sans">
   <!-- Navbar -->
-  <nav class="flex justify-start md:ml-20 items-center p-6 w-full">
-    <i class="fa-solid fa-bars text-3xl text-blue-500"></i>
-    <h1 class="text-3xl font-bold mx-7">
+  <!-- Floating Navbar -->
+  <div class="fixed top-4 left-4 right-4 z-50 bg-white shadow-[0_0_10px_rgba(0,0,0,0.1)] rounded-full px-6 py-2 flex items-center justify-between">
+    
+    <!-- Logo -->
+    <div class="text-3xl font-bold mx-2">
       <span class="text-red-500">K</span><span class="text-blue-500">i</span><span class="text-green-500">d</span><span
         class="text-yellow-500">d</span><span class="text-blue-500">o</span><span class="text-green-500">V</span><span
         class="text-red-500">e</span><span class="text-yellow-500">r</span><span class="text-blue-500">s</span><span
         class="text-red-500">e</span>
-    </h1>
-  </nav>
+    </div>
+
+    <!-- Desktop Menu -->
+    <nav class="hidden md:flex space-x-6 text-md font-medium text-gray-700">
+      <a href="#">Learning tools</a>
+      <a href="#">Read stories</a>
+      <a href="#">Play games</a>
+    </nav>
+
+    <!-- Contact Us Button -->
+    <button class="hidden md:block bg-blue-600 text-white px-4 py-1 rounded-full text-sm font-semibold">
+      Contact us
+    </button>
+
+    <!-- Mobile Hamburger Icon -->
+    <div class="md:hidden relative">
+      <button @click="open = !open" class="focus:outline-none">
+        <!-- Hamburger Icon -->
+        <svg class="w-6 h-6 text-gray-800" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+
+      <!-- Dropdown Menu -->
+      <div 
+        x-show="open"
+        @click.away="open = false"
+        class="absolute right-0 mt-2 w-48 bg-white shadow-md rounded-md py-2 text-sm font-medium text-gray-700 z-50"
+      >
+        <a href="#" class="block px-4 py-2 hover:bg-gray-100">Learning tools</a>
+        <a href="#" class="block px-4 py-2 hover:bg-gray-100">Read stories</a>
+        <a href="#" class="block px-4 py-2 hover:bg-gray-100">Play games</a>
+        <a href="#" class="block px-4 py-2 text-white bg-blue-600 rounded-b-md hover:bg-blue-700 mt-1 mx-2 text-center">Contact us</a>
+      </div>
+    </div>
+  </div>
 
   <!-- Hero Section -->
-  <section class="text-center px-6 mt-6">
+  <section class="text-center px-6 pt-24">
     <h2 class="text-4xl font-bold mb-4">Discover Fun and Learning for Kids</h2>
     <p class="text-lg mb-6 max-w-xl mx-auto">Explore stories, learning tools, and educational activities designed to
       engage and inspire children.</p>

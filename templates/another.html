@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" x-data="{ open: false }" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Responsive Navbar</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/alpinejs" defer></script>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+  <!-- Floating Navbar -->
+  <div class="fixed top-4 left-4 right-4 z-50 bg-white shadow-lg rounded-full px-6 py-2 flex items-center justify-between">
+    
+    <!-- Logo -->
+    <div class="text-2xl font-bold text-blue-700">
+      cloud<span class="text-gray-800">factory</span>
+    </div>
+
+    <!-- Desktop Menu -->
+    <nav class="hidden md:flex space-x-6 text-sm font-medium text-gray-700">
+      <a href="#">AI Platform</a>
+      <a href="#">AI Consulting</a>
+      <a href="#">For Enterprise</a>
+      <a href="#">Resources</a>
+    </nav>
+
+    <!-- Contact Us Button -->
+    <button class="hidden md:block bg-blue-600 text-white px-4 py-1 rounded-full text-sm font-semibold">
+      Contact us
+    </button>
+
+    <!-- Mobile Hamburger Icon -->
+    <div class="md:hidden relative">
+      <button @click="open = !open" class="focus:outline-none">
+        <!-- Hamburger Icon -->
+        <svg class="w-6 h-6 text-gray-800" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+
+      <!-- Dropdown Menu -->
+      <div 
+        x-show="open"
+        @click.away="open = false"
+        class="absolute right-0 mt-2 w-48 bg-white shadow-md rounded-md py-2 text-sm font-medium text-gray-700 z-50"
+      >
+        <a href="#" class="block px-4 py-2 hover:bg-gray-100">AI Platform</a>
+        <a href="#" class="block px-4 py-2 hover:bg-gray-100">AI Consulting</a>
+        <a href="#" class="block px-4 py-2 hover:bg-gray-100">For Enterprise</a>
+        <a href="#" class="block px-4 py-2 hover:bg-gray-100">Resources</a>
+        <a href="#" class="block px-4 py-2 text-white bg-blue-600 rounded-b-md hover:bg-blue-700 mt-1 mx-2 text-center">Contact us</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <main class="pt-28 px-8">
+    <section class="max-w-4xl mx-auto">
+      <h1 class="text-4xl font-bold mb-6">Welcome to Our Web App</h1>
+      <p class="mb-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla commodo...</p>
+            <p class="mb-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla commodo...</p>
+      <p class="mb-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla commodo...</p>
+      <p class="mb-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla commodo...</p>
+      <p class="mb-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla commodo...</p>
+      <p class="mb-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla commodo...</p>
+      <p class="mb-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla commodo...</p>
+      <p class="mb-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla commodo...</p>
+      <p class="mb-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla commodo...</p>
+      <p class="mb-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla commodo...</p>
+
+      <div class="h-[2000px] bg-gradient-to-b from-gray-100 to-white"></div>
+    </section>
+  </main>
+
+</body>
+</html>
