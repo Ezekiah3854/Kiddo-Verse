@@ -14,23 +14,24 @@
 </head>
 
 <body class="bg-cream text-gray-800 font-sans min-h-screen" style="background-color: #fff9f3">
-  <!-- Container to center everything -->
-  <div class="flex flex-col items-center justify-center min-h-screen px-2">
-    <!-- Top Navigation -->
-    <div class="flex justify-between py-6 w-full max-w-4xl mb-6">
-      <div class="text-3xl text-blue-500 space-y-1 px-4 sm:px-0">
-        <div class="dropdown">
-          <a tabindex="0" href="{{ url_for('home')}}"><i class="fa-solid fa-bars"></i></a>
-          <ul tabindex="0" class="dropdown-content menu bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm">
-            <li><a href="{{ url_for('home')}}">Back home</a></li>
-          </ul>
-        </div>
-      </div>
+  <!-- Floating Navbar -->
+  <div
+    class="fixed top-4 left-4 right-4 md:left-15 md:right-15 z-50 bg-white shadow-[0_0_10px_rgba(0,0,0,0.3)] rounded-full px-6 py-2 flex items-center justify-between">
 
-      <div class="flex space-x-4 px-4 sm:px-0 font-sans">
-        <input type="text" placeholder="Search" class="input border-none" />
-      </div>
+    <div class="dropdown">
+      <a tabindex="0" href="{{ url_for('home')}}"><i class="fa-solid fa-bars font-bold text-xl"></i></a>
+      <ul tabindex="0" class="dropdown-content menu bg-base-100 rounded-box z-1 w-52 p-2 mt-2 shadow-sm">
+        <li><a href="{{ url_for('home')}}"><i class="fa-solid fa-arrow-left mx-2"></i>Back home</a></li>
+      </ul>
     </div>
+
+    <div class="flex space-x-4 px-4 font-sans">
+      <input type="text" placeholder="Search" class="input" style="outline: none; border: none; border-bottom: 1px solid black;" />
+    </div>
+  </div>
+
+  <!-- Container to center everything -->
+  <div class="flex flex-col items-center justify-center min-h-screen px-2 pt-28">
 
     <!-- Story Categories Section -->
     <div class="w-full max-w-5xl mx-auto flex flex-col gap-7 md:grid mb-7 md:grid-cols-2 md:gap-10 px-6">
