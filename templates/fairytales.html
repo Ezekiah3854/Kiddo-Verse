@@ -15,27 +15,29 @@
 
 <body class="bg-[#fff9f3] text-gray-800 font-sans min-h-screen p-4">
   <div class="w-full flex flex-col items-center justify-center">
-    {% block container%}
-    <!-- Header -->
-    <div class="w-full flex justify-between gap-5 mb-6 max-w-4xl">
+    
+
+    <!-- Floating Navbar -->
+    <div
+      class="fixed top-4 left-4 right-4 z-50 bg-white shadow-[0_0_10px_rgba(0,0,0,0.3)] rounded-full px-6 py-2 flex items-center">
+
       <!-- Back Button -->
       <a href=" {{ url_for('storiescategories')}}">
-        <button class="text-2xl text-white border-none bg-blue-600 px-3 rounded-full">
-          <i class="fa-solid fa-arrow-left"></i>
-        </button>
+          <i class="fa-solid fa-arrow-left font-bold text-2xl md:pl-4"></i>
       </a>
 
       <!-- Title -->
-      <h1 class="text-4xl font-bold text-purple-700 text-center flex-grow">FAIRY TALES</h1>
+      <h1 class="text-lg md:text-3xl font-bold text-purple-700 text-center flex-grow">{{header}}</h1>
     </div>
 
+    {% block container%}
     <!-- Stories Grid -->
-    <div class="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-4 max-w-5xl">
+    <div class="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-4 max-w-5xl mt-20">
       <!-- Story Card -->
       <a href="{{ url_for('story', story_id = 'little-elf')}}">
         <div class="bg-white rounded-xl p-3 flex flex-col items-center shadow-md">
           <img src="https://cdn-icons-png.flaticon.com/128/6336/6336650.png" alt="Little Elf" class="w-20 h-20 mb-2" />
-          <h2 class="text-center text-sm font-bold">The Little Elf<br />and the Lost Shoes</h2>
+          <h2 class="text-center text-sm font-bold">The Little Elf and the Lost Shoes</h2>
           <span class="bg-orange-400 text-white text-xs px-3 py-1 mt-2 rounded-full">Ages 3+</span>
         </div>
       </a>

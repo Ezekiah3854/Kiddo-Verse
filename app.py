@@ -26,22 +26,22 @@ def storiescategories():
 @app.route('/api/stories-category/fairytales', methods=['GET'])
 def fairytales():
     """render fairy tales page"""
-    return render_template('fairytales.html')
+    return render_template('fairytales.html', header="Fairy Tales")
 
 @app.route('/api/stories-category/animal-stories', methods=['GET'])
 def animalstories():
     """render animal stories page"""
-    return render_template('animalstories.html')
+    return render_template('animalstories.html', header="Animal Stories")
 
 @app.route('/api/stories-category/adventure-stories', methods=['GET'])
 def adventurestories():
     """render adventure stories page"""
-    return render_template('adventurestories.html')
+    return render_template('adventurestories.html', header="Adventure Stories")
 
 @app.route('/api/stories-category/bedtime-stories', methods=['GET'])
 def bedtimestories():
     """render bedtime stories page"""
-    return render_template('bedtimestories.html')
+    return render_template('bedtimestories.html', header="Bedtime Stories")
 
 @app.route('/story/<story_id>')
 def story(story_id):
@@ -51,7 +51,7 @@ def story(story_id):
     if story_data is None:
         print("Mambo ni kama imekataaa kiasi!")
 
-    return render_template('story.html', story = story_data)
+    return render_template('story.html', story = story_data, header=story_data['title'])
 
 if __name__ == '__main__':
     app.run(debug=True)

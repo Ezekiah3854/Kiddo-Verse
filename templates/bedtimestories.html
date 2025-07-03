@@ -1,21 +1,9 @@
 {% extends 'fairytales.html'%}
 {% block title%}Bedtime{% endblock%}
 {% block container%}
-<!-- Header -->
-<div class="w-full flex justify-between gap-5 mb-6 max-w-4xl">
-    <!-- Back Button -->
-    <a href="{{ url_for('storiescategories')}}">
-        <button class="text-2xl text-white border-none bg-blue-600 px-3 rounded-full">
-            <i class="fa-solid fa-arrow-left"></i>
-        </button>
-    </a>
-
-    <!-- Title -->
-    <h1 class="text-4xl font-bold text-purple-700 text-center flex-grow">BEDTIME STORIES</h1>
-</div>
 
 <!-- Stories Grid -->
-<div class="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-4 max-w-5xl">
+<div class="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-4 max-w-5xl mt-20">
     <!-- Story Card -->
     <a href="{{ url_for('story', story_id = 'moon-hug')}}">
         <div class="bg-white rounded-xl p-3 flex flex-col items-center shadow-lg">
