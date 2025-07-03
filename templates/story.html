@@ -1,11 +1,109 @@
-{% extends 'fairytales.html'%}
-{% block title%}{{story.category}}{% endblock%}
-{% block container%}
-<div class="max-w-3xl mx-auto text-lg leading-relaxed space-y-4 mt-20">
+{% extends 'fairytales.html' %}
+{% block title %}{{ story.category }}{% endblock %}
+{% block container %}
+
+<!-- Story Content -->
+<div class="max-w-3xl mx-auto text-lg leading-relaxed space-y-4 mt-20" id="story-text">
     {% for paragraph in story.content %}
     <p>{{ paragraph }}</p>
     {% endfor %}
     <p class="py-6 text-center font-semibold">***** The End *****</p>
 </div>
-<button class="fixed right-4 bottom-4 bg-red-400 text-white z-50 p-4 shadow-lg hover:bg-red-600 transition-all" title="Listen to the Story" style="border-radius: 50%;"><i class="fa-solid fa-volume-high"></i></button>
-{% endblock%}
+
+<!-- Floating Controls -->
+<div class="fixed right-4 bottom-4 flex flex-col items-end gap-3 z-50">
+  <!-- Narrate Button -->
+  <button id="narrate-btn" class="bg-red-400 text-white rounded-full shadow-lg hover:bg-red-600 transition-all  w-12 h-12" title="Play Narration">
+    <i id="narrate-icon" class="fa-solid fa-volume-high text-xl p-3"></i>
+  </button>
+
+  <!-- Stop Button -->
+  <button id="stop-btn" class="bg-gray-600 text-white rounded-full shadow-lg hover:bg-gray-800 transition-all w-12 h-12" title="Stop Narration">
+    <i class="fa-solid fa-stop text-xl p-3"></i>
+  </button>
+</div>
+
+<!-- Highlight Style -->
+<style>
+  .highlight {
+    background-color: #fef08a;
+    border-radius: 0.25rem;
+    padding: 0.25rem;
+    transition: background-color 0.3s ease-in-out;
+  }
+</style>
+
+<!-- Narration Script -->
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const speakBtn = document.getElementById('narrate-btn');
+    const stopBtn = document.getElementById('stop-btn');
+    const icon = document.getElementById('narrate-icon');
+    const paragraphs = Array.from(document.querySelectorAll('#story-text p'));
+
+    let currentUtterance = null;
+    let isPaused = false;
+    let isReading = false;
+    let currentIndex = 0;
+
+    function readNext() {
+      if (currentIndex >= paragraphs.length) {
+        icon.className = 'fa-solid fa-volume-high text-xl';
+        isReading = false;
+        return;
+      }
+
+      paragraphs.forEach(p => p.classList.remove('highlight'));
+
+      const text = paragraphs[currentIndex].textContent;
+      currentUtterance = new SpeechSynthesisUtterance(text);
+      currentUtterance.lang = 'en-US';
+      currentUtterance.rate = 1;
+      currentUtterance.pitch = 1;
+
+      paragraphs[currentIndex].classList.add('highlight');
+
+      currentUtterance.onend = () => {
+        paragraphs[currentIndex].classList.remove('highlight');
+        currentIndex++;
+        if (!isPaused) readNext();
+      };
+
+      speechSynthesis.speak(currentUtterance);
+    }
+
+    speakBtn.addEventListener('click', () => {
+      if (isReading && isPaused) {
+        speechSynthesis.resume();
+        icon.className = 'fa-solid fa-stop text-xl';
+        isPaused = false;
+        return;
+      }
+
+      if (isReading && !isPaused) {
+        speechSynthesis.pause();
+        icon.className = 'fa-solid fa-pause text-xl';
+        isPaused = true;
+        return;
+      }
+
+      // Start fresh
+      speechSynthesis.cancel();
+      currentIndex = 0;
+      isReading = true;
+      isPaused = false;
+      icon.className = 'fa-solid fa-stop text-xl';
+      readNext();
+    });
+
+    stopBtn.addEventListener('click', () => {
+      speechSynthesis.cancel();
+      paragraphs.forEach(p => p.classList.remove('highlight'));
+      icon.className = 'fa-solid fa-volume-high text-xl';
+      isReading = false;
+      isPaused = false;
+    });
+  });
+</script>
+
+{% endblock %}
