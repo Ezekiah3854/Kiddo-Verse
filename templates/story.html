@@ -3,9 +3,9 @@
 {% block container %}
 
 <!-- Story Content -->
-<div class="max-w-3xl mx-auto text-lg leading-relaxed space-y-4 mt-20" id="story-text">
+<div class="max-w-3xl mx-auto leading-relaxed space-y-3 mt-20" id="story-text">
     {% for paragraph in story.content %}
-    <p>{{ paragraph }}</p>
+    <p class="text-md md:text-lg">{{ paragraph }}</p>
     {% endfor %}
     <p class="py-6 text-center font-semibold">***** The End *****</p>
 </div>
@@ -13,12 +13,12 @@
 <!-- Floating Controls -->
 <div class="fixed right-4 bottom-4 flex flex-col items-end gap-3 z-50">
   <!-- Narrate Button -->
-  <button id="narrate-btn" class="bg-red-400 text-white rounded-full shadow-lg hover:bg-red-600 transition-all  w-12 h-12" title="Play Narration">
+  <button id="narrate-btn" class="bg-blue-600 text-white rounded-full shadow-lg hover:bg-blue-500 transition-all  w-14 h-14" title="Play Narration">
     <i id="narrate-icon" class="fa-solid fa-volume-high text-xl p-3"></i>
   </button>
 
   <!-- Stop Button -->
-  <button id="stop-btn" class="bg-gray-600 text-white rounded-full shadow-lg hover:bg-gray-800 transition-all w-12 h-12" title="Stop Narration">
+  <button id="stop-btn" class="bg-gray-600 text-white rounded-full shadow-lg hover:bg-gray-800 transition-all w-14 h-14" title="Stop Narration">
     <i class="fa-solid fa-stop text-xl p-3"></i>
   </button>
 </div>
@@ -75,14 +75,14 @@
     speakBtn.addEventListener('click', () => {
       if (isReading && isPaused) {
         speechSynthesis.resume();
-        icon.className = 'fa-solid fa-stop text-xl';
+        icon.className = 'fa-solid fa-pause text-xl';
         isPaused = false;
         return;
       }
 
       if (isReading && !isPaused) {
         speechSynthesis.pause();
-        icon.className = 'fa-solid fa-pause text-xl';
+        icon.className = 'fa-solid fa-play text-xl';
         isPaused = true;
         return;
       }
@@ -92,7 +92,7 @@
       currentIndex = 0;
       isReading = true;
       isPaused = false;
-      icon.className = 'fa-solid fa-stop text-xl';
+      icon.className = 'fa-solid fa-pause text-xl';
       readNext();
     });
 
